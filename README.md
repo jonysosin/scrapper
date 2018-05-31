@@ -182,6 +182,7 @@ _This endpoint will receive a searchOrderID and an array of products, this is ca
 `POST /api/product/callback-scrapper` 
 
 ## Themisto Endpoints
+### Crawl Site
 _This endpoint will receive a searchOrder, queryString and callbackURL. It will start to crawl the site, after that, the application will call to callbackURL endpoint using `Basic Auth` with the credentials in `config/default.json`._ 
 
 `POST /api/product/callback-scrapper` 
