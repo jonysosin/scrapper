@@ -8,9 +8,11 @@ You should execute each `npm start` in diferents terminal to
 $ git clone https://github.com/jonysosin/scrapper.git
 
 $ cd ganymede/ 
+$ npm install 
 $ npm start
 
-$ cd themisto/ 
+$ cd themisto/
+$ npm install 
 $ npm start
 ```
 
