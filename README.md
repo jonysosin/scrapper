@@ -5,7 +5,6 @@ Table of contents
 
 <!--ts-->
    * [Installation](#installation)
-   * [Table of contents](#table-of-contents)
    * [How to run it](#how-to-run-it)
    * [Postman Collection](#postman-collection)
    * [Ganymede Endpoints](#ganymede-endpoints)
@@ -16,7 +15,7 @@ Table of contents
 <!--te-->
 
 ## Installation
-```sh
+```sh 
 $ git clone https://github.com/jonysosin/scrapper.git
 
 $ cd ganymede/ 
