@@ -9,10 +9,10 @@ Table of contents
    * [How to run it](#how-to-run-it)
    * [Postman Collection](#postman-collection)
    * [Ganymede Endpoints](#ganymede-endpoints)
-        * [Ganymede Endpoints](#ganymede-endpoints)
-        Authentication between apps
+        * [Public Endpoints](#public-endpoints)
+        * [Private Endpoints](#private-endpoints)
+        * [Authentication between apps](#authentication-between-apps)
    * [Themisto Endpoints](#themisto-endpoints)
-   * [Authentication between apps](#authentication-between-apps)
 <!--te-->
 
 ## Installation
