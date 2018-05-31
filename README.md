@@ -206,6 +206,7 @@ _This endpoint will receive a searchOrderID and an array of products, this is ca
 When crawl process is finished, themisto calls to ganymede and send the products using `Basic Auth` stored in `config/`, these credentials can be edited changing `config/default.json` file in both apps.
 
 ## Themisto Endpoints
+### Crawl Site
 _This endpoint will receive a searchOrder, queryString and callbackURL. It will start to crawl the site, after that, the application will call to callbackURL endpoint using `Basic Auth` with the credentials in `config/default.json`._ 
 
 `POST /api/scrap` 
