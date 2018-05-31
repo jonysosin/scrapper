@@ -27,6 +27,7 @@ $ npm start
 
 ### Product Search
 _This endpoint is in charge of generating a "Search Order", which is processed in themisto. This returns an SearchOrderID to check the status_
+
 `POST http://localhost:3131/api/product/search`
 
 _Example of request body_
@@ -43,6 +44,7 @@ _Example of request body_
 ```
 ### Search Order List
 _This endpoint will return a list of the search orders that exists in the database._
+
 `GET http://localhost:3131/api/product/search-order/list`
 
 _Example of response_
@@ -68,9 +70,11 @@ _Example of response_
 ### Search Order By ID
 _This endpoint will receive a searchOrderId as a query string, and must return a JSON with the
 status of the searchOrder and the results associated to the search order itself._
+
 `GET http://localhost:3131/api/product/search-order/{searchOrderID}`
 
 _Example of request_
+
 `GET http://localhost:3131/api/product/search-order/5b101ce014c94232aec14fcd`
 
 _Example of response_
@@ -132,9 +136,11 @@ _Example of response_
 ### Get Products by CategoryID
 _This endpoint will receive a categoryId as a query string, and must return an array with all the
 products associated to the given category._
+
 `GET http://localhost:3131/api/product/category/{productCategoryID}`
 
 _Example of request_
+
 `GET http://localhost:3131/api/product/category/5b0fe35441c4fc5df8dc9463`
 
 _Example of response_
@@ -172,8 +178,10 @@ _Example of response_
 ```
 ### Callback Create Products (private)
 _This endpoint will receive a searchOrderID and an array of products, this is called when themisto finish crawl process, endpoint is private and `Basic Auth` is required, the credentials are in `config/default.json`._ 
+
 `POST /api/product/callback-scrapper` 
 
 ## Themisto Endpoints
 _This endpoint will receive a searchOrder, queryString and callbackURL. It will start to crawl the site, after that, the application will call to callbackURL endpoint using `Basic Auth` with the credentials in `config/default.json`._ 
+
 `POST /api/product/callback-scrapper` 
