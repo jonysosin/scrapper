@@ -1,9 +1,19 @@
 # Scrapper
 
-Postman Collection https://www.getpostman.com/collections/0114d224c9a2ea051c60
+Table of contents
+=================
+
+<!--ts-->
+   * [Installation](#installation)
+   * [Table of contents](#table-of-contents)
+   * [How to run it](#how-to-run-it)
+   * [Postman Collection](#postman-collection)
+   * [Ganymede Endpoints](#ganymede-endpoints)
+   * [Themisto Endpoints](#themisto-endpoints)
+   * [Authentication between apps](#authentication-between-apps)
+<!--te-->
 
 ## Installation
-You should execute each `npm start` in diferents terminal to 
 ```sh
 $ git clone https://github.com/jonysosin/scrapper.git
 
@@ -15,13 +25,19 @@ $ npm install
 ```
 
 ## How to run it
+You should execute each `npm start` in diferents terminal to 
 ```sh
 $ cd ganymede/ 
 $ npm start 
+```
 
+```sh
 $ cd themisto/
 $ npm start 
 ```
+
+## Postman Collection
+`Postman Collection https://www.getpostman.com/collections/0114d224c9a2ea051c60`
 
 ## Ganymede endpoints
 
@@ -184,4 +200,7 @@ _This endpoint will receive a searchOrderID and an array of products, this is ca
 ## Themisto Endpoints
 _This endpoint will receive a searchOrder, queryString and callbackURL. It will start to crawl the site, after that, the application will call to callbackURL endpoint using `Basic Auth` with the credentials in `config/default.json`._ 
 
-`POST /api/product/callback-scrapper` 
+`POST /api/scrap` 
+
+## Authentication between apps
+When crawl process is finished, themisto calls to ganymede and send the products using `Basic Auth` stored in `config/`, these credentials can be edited changing `config/default.json` file in both apps.
