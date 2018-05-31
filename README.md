@@ -9,6 +9,8 @@ Table of contents
    * [How to run it](#how-to-run-it)
    * [Postman Collection](#postman-collection)
    * [Ganymede Endpoints](#ganymede-endpoints)
+        * [Ganymede Endpoints](#ganymede-endpoints)
+        Authentication between apps
    * [Themisto Endpoints](#themisto-endpoints)
    * [Authentication between apps](#authentication-between-apps)
 <!--te-->
@@ -39,7 +41,8 @@ $ npm start
 ## Postman Collection
 `Postman Collection https://www.getpostman.com/collections/0114d224c9a2ea051c60`
 
-## Ganymede endpoints
+# Ganymede endpoints
+## Public Endpoints
 
 ### Product Search
 _This endpoint is in charge of generating a "Search Order", which is processed in themisto. This returns an SearchOrderID to check the status_
@@ -192,15 +195,17 @@ _Example of response_
     }
 ]
 ```
+
+## Private Endpoints
 ### Callback Create Products (private)
 _This endpoint will receive a searchOrderID and an array of products, this is called when themisto finish crawl process, endpoint is private and `Basic Auth` is required, the credentials are in `config/default.json`._ 
 
 `POST /api/product/callback-scrapper` 
 
+### Authentication between apps
+When crawl process is finished, themisto calls to ganymede and send the products using `Basic Auth` stored in `config/`, these credentials can be edited changing `config/default.json` file in both apps.
+
 ## Themisto Endpoints
 _This endpoint will receive a searchOrder, queryString and callbackURL. It will start to crawl the site, after that, the application will call to callbackURL endpoint using `Basic Auth` with the credentials in `config/default.json`._ 
 
 `POST /api/scrap` 
-
-## Authentication between apps
-When crawl process is finished, themisto calls to ganymede and send the products using `Basic Auth` stored in `config/`, these credentials can be edited changing `config/default.json` file in both apps.
