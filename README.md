@@ -1,4 +1,4 @@
-# Dillinger
+# Scrapper
 
 Postman Collection https://www.getpostman.com/collections/0114d224c9a2ea051c60
 
