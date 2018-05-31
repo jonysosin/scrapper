@@ -170,3 +170,10 @@ _Example of response_
     }
 ]
 ```
+### Callback Create Products (private)
+_This endpoint will receive a searchOrderID and an array of products, this is called when themisto finish crawl process, endpoint is private and `Basic Auth` is required, the credentials are in `config/default.json`._ 
+`POST /api/product/callback-scrapper` 
+
+## Themisto Endpoints
+_This endpoint will receive a searchOrder, queryString and callbackURL. It will start to crawl the site, after that, the application will call to callbackURL endpoint using `Basic Auth` with the credentials in `config/default.json`._ 
+`POST /api/product/callback-scrapper` 
