@@ -9,7 +9,6 @@ let mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/ganymade');
 
 const productSearch = async(ctx) => {
-    debugger;
     let searchOrder = new SearchOrder({});
     ctx.body = searchOrder;
     
